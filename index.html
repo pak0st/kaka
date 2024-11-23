@@ -1,28 +1,56 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>براز براز براز</title>
+    <title>أنبوب أنبوب</title>
     <style>
         body {
             background-color: black;
             color: white;
             font-size: 36px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
             font-family: Arial, sans-serif;
             direction: rtl;
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        /* Уменьшаем изображение в 4 раза и повторяем его 15 раз */
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 25%; /* уменьшаем размер изображения в 4 раза */
+            height: auto;
+            background-image: url('https://github.com/pak0st/kaka/raw/main/5224685376529097986.jpg');
+            background-repeat: repeat-y; /* Повторяем изображение по вертикали */
+            background-size: contain; /* Изображение будет масштабироваться */
+            width: 100%;
+            height: 100%;
+        }
+
+        /* Текст будет распределен по всему фону */
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            text-align: center;
+            white-space: pre-line; /* Сохраняем разрывы строк в тексте */
         }
     </style>
 </head>
 <body>
-    <img src="https://github.com/pak0st/kaka/raw/main/5224685376529097986.jpg" alt="Image" style="max-width: 100%; height: auto;">
-    <p>براز براز براز براز براز برازبراز براز براز براز براز برازبراز براز براز براز براز برازبراز براز براز براز براز براز</p>
+    <div class="background-image"></div>
+    <div class="text">
+        أنبوب أنبوب
+    </div>
 </body>
 </html>
+
